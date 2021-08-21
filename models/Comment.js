@@ -15,6 +15,7 @@ Comment.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
+        // comment must be at least one character long
         len: [1],
       },
     },
@@ -41,4 +42,5 @@ Comment.init(
   }
 );
 
+// Export the model
 module.exports = Comment;

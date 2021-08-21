@@ -16,11 +16,12 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    content: {
-      type: DataTypes.STRING,
+    post_text: {
+      type: DataTypes.TEXT,
       allowNull: false,
       validate: {
-        len: [4],
+        // post must be at least one character long
+        len: [1],
       },
     },
     user_id: {
@@ -39,4 +40,5 @@ Post.init(
   }
 );
 
+// Export the model
 module.exports = Post;
