@@ -1,6 +1,6 @@
 async function newFormHandler(event) {
   event.preventDefault();
-  alert("hi there");
+  //  alert("hi there");
   const title = document.querySelector('input[name="post-title"]').value;
   const post_text = document.getElementById("post-text").value;
 
@@ -16,7 +16,7 @@ async function newFormHandler(event) {
   });
 
   if (response.ok) {
-    alert(post_text + " " + title);
+    //  alert(post_text + " " + title);
     document.location.replace("/dashboard");
   } else {
     alert(response.statusText);

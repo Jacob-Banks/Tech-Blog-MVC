@@ -4,23 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Tech Blog</title>
-    {{! <link rel="stylesheet" href="/stylesheet/style.css" />
-  }}
+    <link rel="stylesheet" href="/stylesheet/style.css" />
   </head>
 
   <body>
     <div class="wrapper">
       <header>
         <nav>
-
           <a href="/">Home</a>
-          <a href="/dashboard">Dashboard</a>
           {{#if loggedIn}}
-            <button id="logout" class="btn-no-style">logout</button>
-          {{else}}
-            <a href="/login">login</a>
+            <a href="/dashboard">Dashboard</a>
           {{/if}}
-
+          {{#unless loggedIn}}
+            <a href="/login">Login</a>
+          {{/unless}}
+          {{#if loggedIn}}
+            <button id="logout" class="btn-no-style">Logout</button>
+          {{/if}}
         </nav>
         <h1>
           The Tech Blog
@@ -34,4 +34,5 @@
       <script src="/javascript/logout.js"></script>
     {{/if}}
   </body>
+
 </html>

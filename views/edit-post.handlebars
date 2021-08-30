@@ -4,13 +4,22 @@
     Edit Post
   </h2>
   <form class="edit-post-form">
-    <div>
-
-      <input name="post-title" type="text" value="{{post.title}}" />
+    <div class="form-content">
+      <label for="post-title">Title</label><br />
+      <input
+        name="post-title"
+        class="comment-body"
+        type="text"
+        value="{{post.title}}"
+      />
 
     </div>
-    <div>
-      <textarea name="post-text">{{post.post_text}}</textarea>
+    <div class="form-content">
+      <label for="post-text">Content</label><br />
+      <textarea
+        class="comment-body"
+        name="post-text"
+      >{{post.post_text}}</textarea>
 
     </div>
     <div>
@@ -26,7 +35,7 @@
 </article>
 <form class="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea name="comment-body" class="comment-body"></textarea>
   </div>
 
   <div>
